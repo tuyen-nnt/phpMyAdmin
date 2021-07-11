@@ -1,16 +1,9 @@
 # my-docker
 
-MụC TIÊU:
+<h2> OBJECTIVE
 
-    Tạo image có nhiệm vụ:
+Using available images: mysql, wordpress, phpMyAdmin and php-app (need to create an image) to compose an environment that meets the requirements as below:
 
-    Chạy được MYSQL chứa database của Tuyền thông qua phpMyAdmin trên máy khác.
-
-    Expose ra port 9090.
-
-    Máy khác chỉ cần pull image về và truy cập IP qua port 9090 để hiện ra trang phpMyAdmin và đăng nhập.
-
-    Máy khác khi đem về chạy câu: docker run -it -p 127.0.0.1:8080:80 image_name port 8080 sẽ có thể truy cập với địa chỉ 127.0.0.1 (localhost)
-
-    Sau đó nhờ Bảo chuyển địa chỉ máy để truy cập trang trên sang tuyen.tech
-
+* Access localhost:8080 for phpMyAdmin web service
+* Access localhost:8000 for wordpress to show contents of database
+* Access localhost:9090 for a web showing content of todo_list table as in todo_list.php (burn as image with Dockerfile)
