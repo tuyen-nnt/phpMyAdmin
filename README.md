@@ -1,6 +1,6 @@
 # my-docker
 
-<h2> OBJECTIVE
+### OBJECTIVE
 
 Using available images: mysql, wordpress, phpMyAdmin and php-app (need to create an image) to compose an environment that meets the requirements as below:
 
