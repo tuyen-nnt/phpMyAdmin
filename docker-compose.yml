@@ -28,7 +28,10 @@ services:
       MYSQL_ROOT_PASSWORD: secret 
     networks:
       - wpsite
+      
   # Wordpress
+  # To access localhost:8000 showing wordpress, need to modify the info in wp-config.php after docker-compose
+  # Or override it by my available modified wp-config.php file in the ./compose-config/ after your compose
   wordpress:
     depends_on:
       - db
@@ -44,10 +47,12 @@ services:
     networks:
       - wpsite
       
-    # Tuyen PHP image
+    # PHP image
+    # Showing structured todo_list table by entering localhost:9090 address
   php-app:
     depends_on:
       - db
+    # Need to build my-php-app image by the Dockerfile in the ./my-php-image/ before docker-compose
     image: my-php-app:latest
     ports:
       - '9090:80'
